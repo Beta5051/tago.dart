@@ -1,0 +1,14 @@
+name: tago
+description: 국도교통부 TAGO API 라이브러리
+version: 1.0.0
+repository: https://github.com/Beta5051/tago.dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^0.13.6
+  xml: ^6.3.0
+
+dev_dependencies:
+  lints: ^2.1.0
