@@ -9,7 +9,7 @@ dependencies:
 ```
 
 ```dart
-import 'package:tago_dart/tago_dart.dart';
+import 'package:tago/tago.dart';
 
 const serviceKey = 'YOUR_SERVICE_KEY';
 
