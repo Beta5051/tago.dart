@@ -1,6 +1,7 @@
 import 'package:xml/xml.dart';
+import 'model_to_string.dart';
 
-class BusRouteNo {
+class BusRouteNo with ModelToString {
   const BusRouteNo({
     required this.routeId,
     required this.routeNo,
@@ -28,8 +29,4 @@ class BusRouteNo {
         startVehicleTime: element.getElement('startvehicletime')?.innerText,
         endVehicleTime: element.getElement('endvehicletime')?.innerText,
       );
-
-  @override
-  String toString() =>
-      'BusRouteNo(routeId: $routeId, routeNo: $routeNo, routeTp: $routeTp, startNodeNm: $startNodeNm, endNodeNm: $endNodeNm, startVehicleTime: $startVehicleTime, endVehicleTime: $endVehicleTime)';
 }

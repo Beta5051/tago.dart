@@ -1,6 +1,7 @@
 import 'package:xml/xml.dart';
+import 'model_to_string.dart';
 
-class BusSttnThrghRoute {
+class BusSttnThrghRoute with ModelToString {
   const BusSttnThrghRoute({
     required this.routeId,
     required this.routeNo,
@@ -23,8 +24,4 @@ class BusSttnThrghRoute {
         startNodeNm: element.getElement('startnodenm')!.innerText,
         endNodeNm: element.getElement('endnodenm')!.innerText,
       );
-
-  @override
-  String toString() =>
-      'BusSttnThrghRoute(routeId: $routeId, routeNo: $routeNo, routeTp: $routeTp, startNodeNm: $startNodeNm, endNodeNm: $endNodeNm)';
 }

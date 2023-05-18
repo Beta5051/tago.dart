@@ -1,6 +1,7 @@
 import 'package:xml/xml.dart';
+import 'model_to_string.dart';
 
-class BusCtyCode {
+class BusCtyCode with ModelToString {
   const BusCtyCode({
     required this.cityCode,
     required this.cityName,
@@ -13,7 +14,4 @@ class BusCtyCode {
         cityCode: int.parse(element.getElement('citycode')!.innerText),
         cityName: element.getElement('cityname')!.innerText,
       );
-
-  @override
-  String toString() => 'CtyCode(cityCode: $cityCode, cityName: $cityName)';
 }

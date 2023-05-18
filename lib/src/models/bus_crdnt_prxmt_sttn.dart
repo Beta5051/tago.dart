@@ -1,6 +1,7 @@
 import 'package:xml/xml.dart';
+import 'model_to_string.dart';
 
-class BusCrdntPrxmtSttn {
+class BusCrdntPrxmtSttn with ModelToString {
   const BusCrdntPrxmtSttn({
     required this.gpsLati,
     required this.gpsLong,
@@ -23,8 +24,4 @@ class BusCrdntPrxmtSttn {
         nodeNm: element.getElement('nodenm')!.innerText,
         cityCode: int.parse(element.getElement('citycode')!.innerText),
       );
-
-  @override
-  String toString() =>
-      'BusCrdntPrxmtSttn(gpsLati: $gpsLati, gpsLong: $gpsLong, nodeId: $nodeId, cityCode: $cityCode)';
 }

@@ -1,6 +1,7 @@
 import 'package:xml/xml.dart';
+import 'model_to_string.dart';
 
-class BusRouteInfoIem {
+class BusRouteInfoIem with ModelToString {
   const BusRouteInfoIem({
     required this.routeId,
     required this.routeNo,
@@ -40,8 +41,4 @@ class BusRouteInfoIem {
         intervalsuntime: int.tryParse(
             element.getElement('intervalsuntime')?.innerText ?? ''),
       );
-
-  @override
-  String toString() =>
-      'BusRouteInfoIem(routeId: $routeId, routeNo: $routeNo, routeTp: $routeTp, startNodeNm: $startNodeNm, endNodeNm: $endNodeNm, startVehicleTime: $startVehicleTime, endVehicleTime: $endVehicleTime, intervaltime: $intervaltime, intervalsattime: $intervalsattime, intervalsuntime: $intervalsuntime)';
 }

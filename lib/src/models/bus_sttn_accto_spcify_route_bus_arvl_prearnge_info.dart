@@ -1,6 +1,7 @@
 import 'package:xml/xml.dart';
+import 'model_to_string.dart';
 
-class BusSttnAcctoSpcifyRouteBusArvlPrearngeInfo {
+class BusSttnAcctoSpcifyRouteBusArvlPrearngeInfo with ModelToString {
   const BusSttnAcctoSpcifyRouteBusArvlPrearngeInfo({
     required this.nodeId,
     required this.nodeNm,
@@ -34,8 +35,4 @@ class BusSttnAcctoSpcifyRouteBusArvlPrearngeInfo {
         vehicleTp: element.getElement('vehicletp')?.innerText,
         arrTime: int.parse(element.getElement('arrtime')!.innerText),
       );
-
-  @override
-  String toString() =>
-      'BusSttnAcctoSpcifyRouteBusArvlPrearngeInfo(nodeId: $nodeId, nodeNm: $nodeNm, routeId: $routeId, routeNo: $routeNo, routeTp: $routeTp, arrprevstationcnt: $arrprevstationcnt, vehicleTp: $vehicleTp, arrTime: $arrTime)';
 }
