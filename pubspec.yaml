@@ -1,5 +1,4 @@
 name: tago
-description: 국도교통부 TAGO API 라이브러리
 version: 1.0.0
 repository: https://github.com/Beta5051/tago.dart
 

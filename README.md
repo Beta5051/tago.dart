@@ -5,7 +5,7 @@
 ```yaml
 dependencies:
   tago:
-    git: git@github.com:Beta5051/tago.dart.git
+    git: https://github.com/Beta5051/tago.dart.git
 ```
 
 ```dart
